@@ -1,0 +1,23 @@
+$(SML_LIB)/basis/mlton.mlb
+$(SML_LIB)/basis/basis.mlb
+
+ann
+  "allowFFI true"
+in
+  ffi/gles3-import.sml
+  ffi/glfw-import.sml
+  ffi/glfw-key-input.sml
+end
+
+imperative-shell/constants.sml
+functional-core/game-types.sml
+
+ann
+  "allowVectorExps true"
+in
+  imperative-shell/game-init.sml
+  imperative-shell/game-draw.sml
+end
+
+functional-core/game-update.sml
+imperative-shell/shell.sml
